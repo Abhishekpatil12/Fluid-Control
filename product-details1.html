@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Control Product Details</title>
+
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/product-details.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  
+  <!-- Using CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="nav-wrapper">
+      <div class="container">
+
+        <h1 class="h1">
+          <a href="./index.html" class="logo">Fluid-Con<span class="span">trols</span></a>
+        </h1>
+
+        <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="https://fluidcontrols.com/" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="https://fluidcontrols.com/about/" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="https://fluidcontrols.com/quality-assurance/" class="navbar-link">Quality</a>
+            </li>
+
+            <li>
+              <a href="https://fluidcontrols.com/clients/" class="navbar-link">Clients</a>
+            </li>
+
+            <li>
+              <a href="https://fluidcontrols.com/products/" class="navbar-link">Products</a>
+            </li>
+
+            <li>
+              <a href="https://fluidcontrols.com/contact-us/" class="navbar-link">Contact</a>
+            </li>
+
+
+            <!-- <li>
+              <a href="./shop.html" class="navbar-link">Shop</a>
+            </li> -->
+
+            <!-- <li>
+              <a href="./blog.html" class="navbar-link">Blog</a>
+            </li> -->
+
+            <!-- <li>
+              <a href="./shop.html" class="navbar-link">Products</a>
+            </li>
+
+            <li>
+              <a href="./contact.html" class="navbar-link">Contact</a>
+            </li> -->
+
+          </ul>
+
+        </nav>
+
+        <div class="header-action">
+
+          <div class="search-wrapper" data-search-wrapper>
+
+            <button class="header-action-btn" aria-label="Toggle search" data-search-btn>
+              <ion-icon name="search-outline" class="search-icon"></ion-icon>
+              <ion-icon name="close-outline" class="close-icon"></ion-icon>
+            </button>
+
+            <div class="input-wrapper">
+              <input type="search" name="search" placeholder="Search here" class="search-input">
+
+              <button class="search-submit" aria-label="Submit search">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- <button class="header-action-btn" aria-label="Open whishlist" data-panel-btn="whishlist">
+            <ion-icon name="heart-outline"></ion-icon>
+
+            <data class="btn-badge" value="3">03</data>
+          </button> -->
+
+          <!-- <button class="header-action-btn" aria-label="Open shopping cart" data-panel-btn="cart">
+            <ion-icon name="basket-outline"></ion-icon>
+
+            <data class="btn-badge" value="2">02</data>
+          </button> -->
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <!-- 
+    - #ASIDE
+  -->
+
+  <!-- <aside class="aside">
+
+    <div class="side-panel" data-side-panel="whishlist">
+
+      <button class="panel-close-btn" aria-label="Close whishlist" data-panel-btn="whishlist">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <ul class="panel-list">
+
+        <li class="panel-item">
+          <a href="./product-details.html" class="panel-card">
+
+            <figure class="item-banner">
+              <img src="./assets/images/product-small-1.jpg" width="46" height="46" loading="lazy"
+                alt="Bright Side Vegetarian">
+            </figure>
+
+            <div>
+              <p class="item-title">Bright Side Vegetarian</p>
+
+              <span class="item-value">$20.15x1</span>
+            </div>
+
+            <button class="item-close-btn" aria-label="Remove item">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </a>
+        </li>
+
+        <li class="panel-item">
+          <a href="./product-details.html" class="panel-card">
+
+            <figure class="item-banner">
+              <img src="./assets/images/product-small-2.jpg" width="46" height="46" loading="lazy" alt="Eco Vegetable">
+            </figure>
+
+            <div>
+              <p class="item-title">Eco Vegetable</p>
+
+              <span class="item-value">$13.25x2</span>
+            </div>
+
+            <button class="item-close-btn" aria-label="Remove item">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </a>
+        </li>
+
+        <li class="panel-item">
+          <a href="./product-details.html" class="panel-card">
+
+            <figure class="item-banner">
+              <img src="./assets/images/product-small-3.jpg" width="46" height="46" loading="lazy"
+                alt="House of Veggies">
+            </figure>
+
+            <div>
+              <p class="item-title">House of Veggies</p>
+
+              <span class="item-value">$20.15x1</span>
+            </div>
+
+            <button class="item-close-btn" aria-label="Remove item">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="subtotal">
+        <p class="subtotal-text">Subtotal:</p>
+
+        <data class="subtotal-value" value="215.14">$215.14</data>
+      </div>
+
+      <a href="./whishlist.html" class="panel-btn">View Whishlist</a>
+
+    </div>
+
+    <div class="side-panel" data-side-panel="cart">
+
+      <button class="panel-close-btn" aria-label="Close cart" data-panel-btn="cart">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <ul class="panel-list">
+
+        <li class="panel-item">
+          <a href="./product-details.html" class="panel-card">
+
+            <figure class="item-banner">
+              <img src="./assets/images/product-small-1.jpg" width="46" height="46" loading="lazy"
+                alt="Bright Side Vegetarian">
+            </figure>
+
+            <div>
+              <p class="item-title">Bright Side Vegetarian</p>
+
+              <span class="item-value">$20.15x1</span>
+            </div>
+
+            <button class="item-close-btn" aria-label="Remove item">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </a>
+        </li>
+
+        <li class="panel-item">
+          <a href="./product-details.html" class="panel-card">
+
+            <figure class="item-banner">
+              <img src="./assets/images/product-small-2.jpg" width="46" height="46" loading="lazy" alt="Eco Vegetable">
+            </figure>
+
+            <div>
+              <p class="item-title">Eco Vegetable</p>
+
+              <span class="item-value">$13.25x2</span>
+            </div>
+
+            <button class="item-close-btn" aria-label="Remove item">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="subtotal">
+        <p class="subtotal-text">Subtotal:</p>
+
+        <data class="subtotal-value" value="215.14">$215.14</data>
+      </div>
+
+      <a href="./cart.html" class="panel-btn">View Cart</a>
+
+    </div>
+
+  </aside> -->
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #BREADCUMB
+      -->
+
+      <div class="breadcumb-wrapper">
+
+        <h2 class="page-title">Product Details</h2>
+
+        <ol class="breadcumb-list">
+
+          <!-- <li class="breadcumb-item">
+            <a href="./index.html" class="breadcumb-link">Home</a>
+          </li> -->
+
+          <!-- <li class="breadcumb-item">Product</li> -->
+
+        </ol>
+
+      </div>
+
+
+
+
+
+      <!-- 
+        - #PRODUCT DETAILS
+      -->
+
+      <section class="section product-details">
+        <div class="container">
+
+          <div class="wrapper">
+
+            <div class="product-details-img">
+
+              <figure class="product-display">
+                <img src="./assets/images/3 NUT 24° CONE.png " width="700" height="700" loading="lazy"
+                  class="w-100" data-product-display>
+              </figure>
+
+              <ul class="product-thumbnail-list has-scrollbar">
+
+                <li class="product-thumbnail-item">
+                  <img src="./assets/images/3 NUT 24° CONE.png" width="700" height="700" loading="lazy"
+                     class="w-100" data-product-thumbnail>
+                </li>
+
+                <li class="product-thumbnail-item">
+                  <img src="./assets/images/3. NUT 24° CONE-cs.png" width="700" height="700" loading="lazy"
+                    alt="Non-starchy vegetables." class="w-100" data-product-thumbnail>
+                </li>
+
+                <!-- <li class="product-thumbnail-item">
+                  <img src="./assets/images/product-details-3.jpg" width="700" height="700" loading="lazy"
+                    alt="Non-starchy vegetables." class="w-100" data-product-thumbnail>
+                </li>
+
+                <li class="product-thumbnail-item">
+                  <img src="./assets/images/product-details-2.jpg" width="700" height="700" loading="lazy"
+                    alt="Non-starchy vegetables." class="w-100" data-product-thumbnail>
+                </li> -->
+
+              </ul>
+
+            </div>
+
+            <div class="product-details-content" >
+
+              <h3 class="product-title" id="invoice">NUT 24° CONE</h3>
+
+              <data class="product-price"> DIN-Connector </data>
+              <br>
+              <br>
+
+              <!-- <data class="product-price" value="350.00">350.00 USD</data>
+
+              <div class="rating-wrapper">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div> -->
+
+              <p class="product-text" >
+                The nut 24° cone DIN-connector is a type of bite-ring connector that uses a 24-degree cone to create a tight and leak-proof seal with a tube. It is commonly used in hydraulic and pneumatic systems, as well as in other applications where a reliable and leak-proof connection is required. 
+                as well as in other applications where a reliable and leak-proof connection is required. 
+                The nut 24° cone DIN-connector is a two-piece fitting that consists of the connector nut and a matching cutting ring. The cutting ring is made of soft steel or stainless steel and has a 24-degree cone shape. The nut has a corresponding 24-degree cone-shaped internal surface.
+                When the nut is tightened onto the cutting ring, the cutting ring bites into the tube, creating a tight and leak-proof seal. The 24-degree cone shape provides a strong and stable connection, even under high pressure and vibration.
+                The nut 24° cone DIN-connector is available in a variety of sizes to accommodate different tube diameters. It is also available in different materials, such as brass, stainless steel, and nickel-plated brass.
+
+                Here are some of the advantages of using a nut 24° cone DIN-connector:
+
+                    Leak-proof seal
+                    Strong and stable connection
+                    Available in a variety of sizes and materials
+                    Easy to install
+                    Reusable
+
+                Here is a disadvantage of using a nut 24° cone DIN-connector:
+
+                    The cutting ring can be damaged if overtightened
+
+                Overall, the nut 24° cone DIN-connector is a reliable and versatile type of bite-ring connector that is well-suited for a wide range of applications.
+              </p>
+
+              <!-- <div class="product-weight-wrapper">
+
+                <p class="product-weight-title">Weight :</p>
+
+                <ul class="product-weight-list">
+
+                  <li class="product-weight-item">
+                    <input type="radio" name="weight" id="weight-1" class="product-weight-radio">
+
+                    <label for="weight-1" class="product-weight-label">4L</label>
+                  </li>
+
+                  <li class="product-weight-item">
+                    <input type="radio" name="weight" id="weight-2" class="product-weight-radio">
+
+                    <label for="weight-2" class="product-weight-label">2L</label>
+                  </li>
+
+                  <li class="product-weight-item">
+                    <input type="radio" name="weight" id="weight-3" class="product-weight-radio">
+
+                    <label for="weight-3" class="product-weight-label">500ML</label>
+                  </li>
+
+                  <li class="product-weight-item">
+                    <input type="radio" name="weight" id="weight-4" class="product-weight-radio">
+
+                    <label for="weight-4" class="product-weight-label">200ML</label>
+                  </li>
+
+                </ul>
+
+              </div> -->
+
+              <!-- <div class="product-qty">
+                <input type="number" name="quantity" value="1" min="1" max="50" class="product-qty-input">
+
+                <button class="btn btn-primary product-qty-btn">Add To Cart</button>
+              </div> -->
+
+            </div>
+
+          </div>
+
+          <!-- <h4 class="description-title">Descripton :</h4>
+
+          <p class="description-text">
+            A single bite progressive ring DIN-connector, also known as a bite-type connector, is a type of hydraulic fitting that uses a single ferrule to create a joint with a tube. The ferrule is case-hardened and has a cutting edge that bites into the tube during installation. This creates a leak-free joint that can withstand high pressure and vibration. Single bite progressive ring DIN-connectors are commonly used in hydraulic systems, pneumatic systems, and other applications where a reliable and leak-proof connection is required. They are available in a variety of sizes and materials to suit a wide range of applications.
+
+            Here are some of the advantages of using single bite progressive ring DIN-connectors:
+            
+                Leak-proof joints
+                Can withstand high pressure and vibration
+                Easy to install
+                Reusable
+                Available in a variety of sizes and materials
+            
+            Here are some of the disadvantages of using single bite progressive ring DIN-connectors:
+            
+                Can be more expensive than other types of connectors
+                Ferrule can be damaged if overtightened
+                Not suitable for use with some types of tubing
+            
+            Overall, single bite progressive ring DIN-connectors are a reliable and versatile type of hydraulic fitting that is well-suited for a wide range of applications.
+          </p> -->
+
+          <h4 class="description-title">Additional Information :</h4>
+
+          <div class="product-table-content">
+
+          <table class="description-table" border="1px" id="mytable">
+
+            <tr class="table-row">
+              <th class="table-heading" scope="row">SERIES</th>
+
+              <td class="table-data">
+                
+                <select name="SERIES" id="SERIES">
+                  <option>Choose a Series</option>
+                </select> 
+                
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-heading" scope="row">FC PART NUMBER</th>
+
+              <td class="table-data">
+                <select name="FC PART NUMBER" id="FCPARTNUMBER">
+                  <option>Choose a FC part number</option>
+              </select> 
+            </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-heading" scope="row">T TUBE OD (MM)</th>
+
+              <td class="table-data" ><p id="MM"></p></td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-heading" scope="row">M</th>
+
+              <td class="table-data"><p id="M"></p></td>
+            </tr>
+            <tr class="table-row">
+              <th class="table-heading" scope="row">H</th>
+
+              <td class="table-data"><p id="H"></p></td>
+            </tr>
+            <tr class="table-row">
+              <th class="table-heading" scope="row">G A/F</th>
+
+              <td class="table-data"><p id="G"></p></td>
+            </tr>
+
+            <!-- <tr class="table-row">
+              <th class="table-heading" scope="row">Size</th>
+
+              <td class="table-data">6KG</td>
+            </tr> -->
+
+          </table>
+
+          </div>
+
+          
+        </div>
+      </section>
+      
+    </article>
+  </main>
+
+  <div class="container1">
+    <div class="center1">
+      <button class="btn btn-primary" id="Download">Download PDF</button>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="./index.html" class="logo">Fluid-Con<span class="span">trols</span></a>
+
+          <p class="footer-text">
+            Established in 1974, Fluid Controls is a leading provider of instrumentation products and services for a wide variety of industrial applications. Headquartered in Mumbai, the group has manufacturing facilities in Pune, including a state-of-the-art R&D centre and testing laboratory.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="./about.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="./shop.html" class="footer-link">Quality</a>
+          </li>
+
+          <li>
+            <a href="./blog.html" class="footer-link">Clients</a>
+          </li>
+
+          <li>
+            <a href="./shop.html" class="footer-link">Products</a>
+          </li>
+
+          <li>
+            <a href="./contact.html" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="contact-link">
+              5th Floor, The International, 16 Maharishi Karve Road, New Marine Lines, Mumbai 400 020, Maharashtra, INDIA.
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+1800123456789" class="contact-link">+91 – 22 – 6823 8000</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:sales@help.com" class="contact-link">sales@fluidcontrols.com</a>
+          </li>
+
+        </ul>
+
+        <!-- <div class="footer-list">
+
+          <p class="footer-list-title">Newsletter</p>
+
+          <p class="newsletter-text">
+            You will be notified when somthing new will be appear.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email" placeholder="Email Address *" required class="footer-input">
+
+            <button type="submit" class="footer-form-btn" aria-label="Submit">
+              <ion-icon name="mail-outline"></ion-icon>
+            </button>
+          </form>
+
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link"> Fluid Controls Pvt. Ltd. 2018.</a>. All Rights Reserved.
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term and Service</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-to-top" aria-label="Back to Top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script type="module">
+
+
+    const jsonData = [
+    { "name": "N-LL-4M", "MM": "4MM", "M": "M8x1", "H": "11.5", "G": "10", "series": "LL" },
+    { "name": "N-LL-5M", "MM": "5MM", "M": "M10x1", "H": "12", "G": "12", "series": "LL" },
+    { "name": "N-LL-6M", "MM": "6MM", "M": "M10x1", "H": "12", "G": "12", "series": "LL" },
+    { "name": "N-LL-8M", "MM": "8MM", "M": "M12x1", "H": "12.5", "G": "14", "series": "LL" },
+    { "name": "N-L-6M", "MM": "6MM", "M": "M12x1.5", "H": "15", "G": "14", "series": "L" },
+    { "name": "N-L-8M", "MM": "8MM", "M": "M14x1.5", "H": "15", "G": "17", "series": "L" },
+    { "name": "N-L-10M", "MM": "10MM", "M": "M16x1.5", "H": "16", "G": "19", "series": "L" },
+    { "name": "N-L-12M", "MM": "12MM", "M": "M18x1.5", "H": "16", "G": "22", "series": "L" },
+    { "name": "N-L-15M", "MM": "15MM", "M": "M22x1.5", "H": "17.5", "G": "27", "series": "L" },
+    { "name": "N-L-18M", "MM": "18MM", "M": "M26x1.5", "H": "18.5", "G": "32", "series": "L" },
+    { "name": "N-L-22M", "MM": "22MM", "M": "M30x2", "H": "20.5", "G": "36", "series": "L" },
+    { "name": "N-L-28M", "MM": "28MM", "M": "M36x2", "H": "21.5", "G": "41", "series": "L" },
+    { "name": "N-L-35M", "MM": "35MM", "M": "M45x2", "H": "24.5", "G": "50", "series": "L" },
+    { "name": "N-L-42M", "MM": "42MM", "M": "M52x2", "H": "24.5", "G": "60", "series": "L" },
+    { "name": "N-S-6M", "MM": "6MM", "M": "M14x1.5", "H": "17", "G": "17", "series": "S" },
+    { "name": "N-S-8M", "MM": "8MM", "M": "M16x1.5", "H": "17", "G": "19", "series": "S" },
+    { "name": "N-S-10M", "MM": "10MM", "M": "M18x1.5", "H": "18", "G": "22", "series": "S" },
+    { "name": "N-S-12M", "MM": "12MM", "M": "M20x1.5", "H": "18", "G": "24", "series": "S" },
+    { "name": "N-S-16M", "MM": "16MM", "M": "M24x1.5", "H": "21", "G": "30", "series": "S" },
+    { "name": "N-S-20M", "MM": "20MM", "M": "M30x1.5", "H": "24.5", "G": "36", "series": "S" },
+    { "name": "N-S-25M", "MM": "25MM", "M": "M36x1.5", "H": "27.5", "G": "46", "series": "S" },
+    { "name": "N-S-30M", "MM": "30MM", "M": "M42x1.5", "H": "29.5", "G": "50", "series": "S" },
+    { "name": "N-S-38M", "MM": "38MM", "M": "M52x1.5", "H": "33", "G": "60", "series": "S" },
+  ];
+  
+  const seriesOptions = ["LL", "L", "S"];
+  
+  function filterNamesBySeries(series) {
+    const filteredNames = jsonData.filter(person => person.series === series);
+    return filteredNames.map(person => person.name);
+  }
+  
+  function updateData(selectedName) {
+    const selectedPart = jsonData.find(person => person.name === selectedName);
+    if (!selectedPart) {
+      console.error("Error: Invalid name selected");
+      return;
+    }
+  
+    const seriesDropdown = document.getElementById("SERIES");
+    const mmElement = document.getElementById("MM");
+    const mElement = document.getElementById("M");
+    const hElement = document.getElementById("H");
+    const gElement = document.getElementById("G");
+  
+    // Update text elements
+    mmElement.textContent = selectedPart.MM;
+    mElement.textContent = selectedPart.M;
+    hElement.textContent = selectedPart.H;
+    gElement.textContent = selectedPart.G;
+  }
+  
+  function updateNamesDropdown(selectedSeries) {
+    const filteredNames = filterNamesBySeries(selectedSeries);
+    const namesDropdown = document.getElementById("FCPARTNUMBER");
+    namesDropdown.innerHTML = ""; // Clear existing options
+  
+    filteredNames.forEach(name => {
+      const optionElement = document.createElement("option");
+      optionElement.value = name;
+      optionElement.textContent = name;
+      namesDropdown.appendChild(optionElement);
+    });
+  
+    // Select the first name from the filtered list
+    const firstOption = namesDropdown.firstChild;
+    if (firstOption) {
+      namesDropdown.value = firstOption.value;
+      updateData(firstOption.value);
+    }
+  }
+  
+  window.onload = function() {
+    const seriesDropdown = document.getElementById("SERIES");
+    seriesOptions.forEach(series => {
+      const optionElement = document.createElement("option");
+      optionElement.value = series;
+      optionElement.textContent = series;
+      seriesDropdown.appendChild(optionElement);
+    });
+  
+    seriesDropdown.addEventListener("change", () => {
+      const selectedSeries = seriesDropdown.value;
+      updateNamesDropdown(selectedSeries);
+    });
+  
+    // Initialize data with the first person from the first series
+    // updateData(filterNamesBySeries("ll")[0]);
+  
+    // Add event listener to namesDropdown
+    const namesDropdown = document.getElementById("FCPARTNUMBER");
+    namesDropdown.addEventListener("change", () => {
+      const selectedName = namesDropdown.value;
+      updateData(selectedName);
+
+    });
+
+    document.getElementById("Download")
+  .addEventListener("click",()=>{
+
+    
+  
+    //const jsPDF = require('jspdf');
+
+    const doc = new jsPDF();
+
+
+     
+  // Get the HTML content of the current page
+  
+   const htmlContent = this.document.getElementById("invoice").textContent;
+
+   
+    const table = document.getElementById('mytable');
+
+    const seriesDropdown = document.getElementById("SERIES");
+    const selectedvalue = seriesDropdown.value;
+
+    const namesDropdown = document.getElementById("FCPARTNUMBER");
+    const selectedvalue1 = namesDropdown.value;
+    const mmElement = document.getElementById("MM").textContent;
+    const mElement = document.getElementById("M").textContent;
+    const hElement = document.getElementById("H").textContent;
+    const gElement = document.getElementById("G").textContent;
+
+    
+    var tableData = [["Series",selectedvalue],["FC Part Number",selectedvalue1],["T Tube OD(MM)",mmElement],["M",mElement],["H",hElement],["G A/F",gElement]];
+
+    var pageWidth = doc.internal.pageSize.width;
+    var pageHeight = doc.internal.pageSize.height;
+  
+    pageWidth = pageWidth/2;
+    pageHeight = pageHeight/2;
+
+    const tableHeader = ['Column 1', 'Column 2'];
+    const tableContent = tableData;
+
+    doc.text('Fluid Controls', pageWidth, 10, 'center');
+    doc.text(htmlContent, pageWidth, 30, 'center');
+
+    doc.autoTable(tableHeader, tableContent, {
+      startY: 50,
+      theme: 'grid',
+      styles: {
+        fontSize: 12,
+        cellPadding: 3,
+      },
+    },20);
+
+    
+
+
+  
+
+   // Convert HTML to PDF
+  // const information = document.getElementById("info").textContent;
+
+  /*
+  
+
+  const seriesDropdown = document.getElementById("SERIES");
+  const selectedvalue = seriesDropdown.value;
+
+  const namesDropdown = document.getElementById("FCPARTNUMBER");
+  const selectedvalue1 = namesDropdown.value;
+  const mmElement = document.getElementById("MM").textContent;
+  const mElement = document.getElementById("M").textContent;
+  const hElement = document.getElementById("H").textContent;
+  const gElement = document.getElementById("G").textContent;
+
+
+
+  var pageWidth = doc.internal.pageSize.width;
+  var pageHeight = doc.internal.pageSize.height;
+  
+    pageWidth = pageWidth/2;
+    pageHeight = pageHeight/2;
+
+  doc.text('Fluid Controls', pageWidth, 10, 'center');
+  doc.text(htmlContent, pageWidth, 30, 'center');
+
+  doc.text('Series : ', pageWidth -10, 50, 'center');
+  doc.text(selectedvalue, pageWidth+5, 50, 'center');
+
+  doc.text('FC PART NO : ', pageWidth -18, 70, 'center');
+  doc.text(selectedvalue1, pageWidth+15, 70, 'center');
+
+  doc.text('T TUBE OD() : ', pageWidth -16, 90, 'center');
+  doc.text(mmElement, pageWidth+13, 90, 'center');
+
+  doc.text('M : ', pageWidth -3, 110, 'center');
+  doc.text(mElement, pageWidth+15, 110, 'center');
+
+  doc.text('H : ', pageWidth -3, 130, 'center');
+  doc.text(hElement, pageWidth+7, 130, 'center');
+
+  doc.text('G A/F : ', pageWidth -8, 150, 'center');
+  doc.text(gElement, pageWidth+5, 150, 'center');
+
+  */
+  // Download the generated PDF file
+  //doc.output("dataurlnewwindow");
+  doc.output('save', 'generated_document.pdf');
+  })
+  }
+      </script>
+
+</body>
+
+</html>
